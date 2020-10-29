@@ -990,6 +990,13 @@ all = [
                         '-DLLVM_ENABLE_ZLIB=FALSE',
                         '-DLLDB_ENABLE_PYTHON=TRUE'])},
 
+    {'name' : "lldb-x86_64-freebsd",
+    'tags'  : ["lldb"],
+    'workernames' : ["lldb-x86_64-freebsd"],
+    'builddir': "lldb-x86_64-freebsd",
+    'factory' : LLDBBuilder.getLLDBCMakeBuildFactory(
+                    test=True)},
+
 # LLD builders.
 
     {'name' : "lld-x86_64-darwin",
